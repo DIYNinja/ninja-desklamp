@@ -11,7 +11,7 @@ void blinkLed(int times, int duration, int pin){
 
  void setBrightness(int brightnessValue, int whiteBalance, bool switchON){
   if(switchON){    
-
+    
     /*
     coldValue = brightnessValue * whiteBalance / BASE;  
     warmValue = brightnessValue * (BASE - whiteBalance) / BASE;*/
@@ -28,9 +28,8 @@ void blinkLed(int times, int duration, int pin){
     coldValue = constrain(coldValue, 0, 255);
     warmValue = constrain(warmValue, 0, 255);
     analogWrite(COLDPIN, coldValue);
-    analogWrite(WARMPIN, warmValue); 
-    
-    value_output();        
+    analogWrite(WARMPIN, warmValue);    
+            
   }
   else{
     analogWrite(COLDPIN, 0);
